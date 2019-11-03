@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  app:
+    build: .
+    image: seleniumwithchrome:v0.12 #golang:1.13.1
+    container_name: app
+    volumes:
+      - ./:/go/src/seleniumChromeDriver
+    working_dir: /go/src/seleniumChromeDriver
+    tty: true
